@@ -279,3 +279,7 @@ table{
 td{
   padding:10px;
 }
+
+.search_prof .result{
+  display: none;
+}
