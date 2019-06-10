@@ -29,7 +29,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="./Index.html">Home</a></li>
         <li><a href="#">Professor Information</a></li>
         <li>
           <div class="dropdown">
@@ -41,11 +41,11 @@
             </div>
       </div></li>
         <li><a href="#">Announcements</a></li>
-        <li><a href="#">Join Us</a></li>
-        <li><a href="#">Contact us</a></li>
+        <li><a href="./Join_Us">Join Us</a></li>
+        <li><a href="./Contact_us.html">Contact us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class = "active"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li class = "active"><a href="#"><span class="glyphicon glyphicon-log-in"></span>Professor Login</a></li>
       </ul>
     </div>
   </div>
@@ -137,4 +137,6 @@ else
     echo "Tumse na ho paega";
   }
 }
+
+
 ?>
