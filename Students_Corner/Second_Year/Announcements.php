@@ -36,7 +36,7 @@ else
   <script src="./jquery/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script>
   <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="stylesheet" type="text/css" href="./CSS/Announcements.css">
+  <link rel="stylesheet" type="text/css" href="./Announcements.css">
 
 </head>
 <body>
@@ -57,25 +57,25 @@ else
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="./Index.html">Home</a></li>
-        <li><a href="./Prof_info.html">Professor Information</a></li>
-        <li>
+        <li><a href="../../Index.html">Home</a></li>
+        <li><a href="../../Prof_info.html">Professor Information</a></li>
+        <li class = "active">
           <div class="dropdown">
             <button class="dropbtn">Students Corner</button>
             <div class="dropdown-content">
-              <a href="./Students_Corner/First_Year/Index.html">First Year</a>
-              <a href="./Students_Corner/Second_Year/Index.html">Second Year</a>
-              <a href="./Students_Corner/Third_Year/Index.html">Third Year</a>
-              <a href="./Students_Corner/Fourth_Year/Index.html">Fourth Year</a>
-              <a href="./Students_Corner/Fifth_Year/Index.html">Fifth Year</a>
+              <a href="../First_Year/Index.html">First Year</a>
+              <a href="../Second_Year/Index.html">Second Year</a>
+              <a href="../Third_Year/Index.html">Third Year</a>
+              <a href="../Fourth_Year/Index.html">Fourth Year</a>
+              <a href="../Fifth_Year/Index.html">Fifth Year</a>
             </div>
       </div></li>
-        <li class = "active"><a href="#">Announcements</a></li>
-        <li><a href="./Join_us.html">Join Us</a></li>
-        <li><a href="./Contact_us.html">Contact Us</a></li>
+        <li><a href="../../Announcements.php">Announcements</a></li>
+        <li><a href="../../Join_us.php">Join Us</a></li>
+        <li><a href="../../Contact_us.html">Contact Us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="./login.php"><span class="glyphicon glyphicon-log-in"></span>Professor Login</a></li>
+        <li><a href="../../login.php"><span class="glyphicon glyphicon-log-in"></span>Professor Login</a></li>
       </ul>
     </div>
   </div>
@@ -91,13 +91,22 @@ else
     </div>
     <div class="col-sm-8 text-left">
       <fieldset>
-        <legend><h2>Announcements and Notifications</h2></legend>
-        <ul>
-        <?php
+        <legend><h2>Related Announcements and Notifications</h2></legend>
+        <b><i>All these Announcements are specifically related to second year students</i></b><br><br>
+        
 
+        <?php
+        
+        if (sizeof($file_arr)!=0){
+              echo "<ul>";
         foreach($file_arr as $file_value){
                 echo '<li><a href="'.$dir.$file_value.'">'.$file_value.'</a></li>';
+
           }
+          echo "</ul>";
+        }
+        else 
+          echo "Sorry No Announcements yet!!!";
         ?>
       </fieldset>
 
