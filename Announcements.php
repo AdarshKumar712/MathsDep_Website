@@ -1,3 +1,28 @@
+<?php
+
+  $count = 0;
+  $file_arr = array();
+  $dir = "./Announcements/";
+  if (is_dir($dir)){
+    if($dh=opendir($dir))
+    {
+      while(($file= readdir($dh))!==false) {
+        $count= $count+1;
+        if ($count<3)
+          continue;
+        array_push($file_arr,"$file");
+      }
+    }
+    else
+      echo "Failed to open dir";
+  }
+else
+{
+  echo "Sorry not a directory";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +32,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="./jquery/jquery.js"></script>
+  <script src="./jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script>
   <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./CSS/Announcements.css">
+
 </head>
 <body>
 </body><header><div class="topnav">
@@ -28,7 +57,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="./Index.html">Home</a></li>
         <li><a href="#">Professor Information</a></li>
         <li>
           <div class="dropdown">
@@ -39,12 +68,12 @@
               <a href="#">Link 3</a>
             </div>
       </div></li>
-        <li><a href="#">Announcements</a></li>
-        <li><a href="#">Join Us</a></li>
-        <li class = "active"><a href="#">Contact us</a></li>
+        <li class = "active"><a href="#">Announcements</a></li>
+        <li><a href="./Join_us.html">Join Us</a></li>
+        <li><a href="./Contact_us.html">Contact Us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span>Professor Login</a></li>
       </ul>
     </div>
   </div>
@@ -59,48 +88,38 @@
       <p><a href="#">MetaKgp</a></p>
     </div>
     <div class="col-sm-8 text-left">
-    <h2>Contact Details</h2>
-     E-mail: 123@gmail.com<br>
-     Mobile: 12344211<br>
-     <hr>
-     <h3><b>Or you can submit your query here:</b></h3>
-     <form class = "query" method = "post" action="#">
-     <table class = "table_form">
-     <tbody>
-       <tr>
-        <td text-align = "center">Name*:</td><td><input type = "text" id = "name" required> </td>
-       </tr>
-       <tr>
-        <td text-align = "center">Roll Number*:</td><td><input type = "text" id = "Roll" required></td>
-       </tr>
-       <tr>
-        <td text-align = "center">Email Id*:</td><td><input type = "email" id = "Email" required></td>
-       </tr>
-       <tr>
-        <td>Query*:</td><td><textarea placeholder="What is your Query?" rows = "10" cols="80" id = "query" required></textarea></td>
-       </tr>
-     </tbody>
-   </table>
-   <input type = "submit" id = "submit_query">
+      <fieldset>
+        <legend><h2>Announcements and Notifications</h2></legend>
+        <ul>
+        <?php
+
+        foreach($file_arr as $file_value){
+                echo '<li><a href="'.$dir.$file_value.'">'.$file_value.'</a></li>';
+          }
+        ?>
+      </fieldset>
+
     </div>
-  </form>
     <div class="col-sm-2 sidenav">
       <div class="well">
-        <p></p>
+        <p><h2>Events</h2></p>
+        <p><a href = "#">Link1</a></p>
+        <p><a href = '#'>Link2</a></p>
       </div>
       <div class="well">
-        <p></p>
+        <p><h2>News</h2></p>
+        <p><a href = "#">Link1</a></p>
+        <p><a href = '#'>Link2</a></p>
       </div>
     </div>
   </div>
 </div>
 
 <footer class="container-fluid text-center">
-  Follow us on : <a href = "https://www.google.com" class = "fa fa-facebook"></a>  <a href = "https://facebook.com" class = "fa fa-facebook"></a>
+  Follow us on : <a href = "#"><img src = "/Images/twitter.png" height= "10px" width = "10px" ></a> <a href = "#">@</a>
   <p>&copy All copyrights reserved to Mathematics Department</p>
 
 </footer>
 
 </body>
 </html>
-

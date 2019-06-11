@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="stylesheet" type="text/css" href="./login.css">
+  <link rel="stylesheet" type="text/css" href="./CSS/main.css">
+  <link rel="stylesheet" type="text/css" href="./CSS/login.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -73,7 +73,7 @@
               <input type = "submit" name = "submit" value = "Login" class = "btn-login">
             </fieldset>
           </form>
-
+          <?php echo $_SESSION['message'];?>
       </div><br><br><br></div>
 <div class="col-sm-2 sidenav">
       <div class="well">
@@ -99,6 +99,7 @@
 <?php
           session_start();
 // Database connection parameters.
+          $_SESSION['message'] =  "";
 $servername = "localhost";
 $username = "root";
 $password = "root";
@@ -129,12 +130,12 @@ if($numrows!=0)
       
         echo "<script>window.location.assign('Dashboard.php');</script>";  
     } else {  
-        echo "Invalid Username or password!";  
+        $_SESSION["message"] = "Invalid Username or password!";  
     } 
     }
 else
   {
-    echo "Tumse na ho paega";
+    $_SESSION["message"] = "Tumse na ho paega";
   }
 }
 
