@@ -30,7 +30,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="./Index.html">Home</a></li>
-        <li><a href="#">Professor Information</a></li>
+        <li><a href="./Prof_info.html">Professor Information</a></li>
         <li>
           <div class="dropdown">
             <button class="dropbtn">Students Corner</button>
