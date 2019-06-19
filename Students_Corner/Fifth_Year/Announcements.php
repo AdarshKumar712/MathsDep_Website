@@ -1,28 +1,22 @@
-<?php
-
-  $count = 0;
-  $file_arr = array();
-  $dir = "./Announcements/";
-  if (is_dir($dir)){
-    if($dh=opendir($dir))
-    {
-      while(($file= readdir($dh))!==false) {
-        $count= $count+1;
-        if ($count<3)
-          continue;
-        array_push($file_arr,"$file");
-      }
-    }
-    else
-      echo "Failed to open dir";
-  }
-else
-{
-  echo "Sorry not a directory";
-}
+<?php 
+    $dir1 = "../../Events";
+    $Events_file = glob($dir1."/*.*");
 
 ?>
 
+<?php
+    $dir2 = "../../News";
+    $News_file = glob($dir2."/*.*");
+?>
+
+
+<?php
+
+  $dir = "./Announcements/";
+  $file = glob($dir."/*.*");
+  $subfile = glob($dir."/*/*.*");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,25 +51,25 @@ else
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="../../Index.html">Home</a></li>
-        <li><a href="../../Prof_info.html">Professor Information</a></li>
+        <li><a href="../../Index.php">Home</a></li>
+        <li><a href="../../Prof_info.php">Professor Information</a></li>
         <li class = "active">
           <div class="dropdown">
             <button class="dropbtn">Students Corner</button>
             <div class="dropdown-content">
-              <a href="../First_Year/Index.html">First Year</a>
-              <a href="../Second_Year/Index.html">Second Year</a>
-              <a href="../Third_Year/Index.html">Third Year</a>
-              <a href="../Fourth_Year/Index.html">Fourth Year</a>
-              <a href="../Fifth_Year/Index.html">Fifth Year</a>
+              <a href="../First_Year/Index.php">First Year</a>
+              <a href="../Second_Year/Index.php">Second Year</a>
+              <a href="../Third_Year/Index.php">Third Year</a>
+              <a href="../Fourth_Year/Index.php">Fourth Year</a>
+              <a href="../Fifth_Year/Index.php">Fifth Year</a>
             </div>
       </div></li>
         <li><a href="../../Announcements.php">Announcements</a></li>
         <li><a href="../../Join_us.php">Join Us</a></li>
-        <li><a href="../../Contact_us.html">Contact Us</a></li>
+        <li><a href="../../Contact_us.php">Contact Us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="../../login.php"><span class="glyphicon glyphicon-log-in"></span>Professor Login</a></li>
+        <li><a href="../../login.php"><span class="glyphicon glyphicon-log-in"></span>Faculty Login</a></li>
       </ul>
     </div>
   </div>
@@ -97,13 +91,16 @@ else
 
         <?php
         
-        if (sizeof($file_arr)!=0){
+        if (sizeof($file)!=0||sizeof($subfile)!=0){
               echo "<ul>";
-        foreach($file_arr as $file_value){
-                echo '<li><a href="'.$dir.$file_value.'">'.$file_value.'</a></li>';
+        foreach($file as $file_value){
+                echo '<li><a href="'.$file_value.'">'.basename($file_value).'</a></li>';}
+        foreach($subfile as $file_value){
+                echo '<li><a href="'.$file_value.'">'.basename($file_value).'</a></li>';}
 
+                echo "</ul>";
           }
-          echo "</ul>";
+          
         }
         else 
           echo "Sorry No Announcements yet!!!";
@@ -114,13 +111,19 @@ else
     <div class="col-sm-2 sidenav">
       <div class="well">
         <p><h2>Events</h2></p>
-        <p><a href = "#">Link1</a></p>
-        <p><a href = '#'>Link2</a></p>
+        <?php 
+          foreach($Events_file as $file_value){
+                echo '<p><a href="'.$file_value.'">'.basename($file_value).'</a></p>';
+          }
+        ?>
       </div>
       <div class="well">
         <p><h2>News</h2></p>
-        <p><a href = "#">Link1</a></p>
-        <p><a href = '#'>Link2</a></p>
+        <?php
+          foreach($News_file as $file_value){
+                echo '<p><a href="'.$file_value.'">'.basename($file_value).'</a></p>';
+          }
+        ?>
       </div>
     </div>
   </div>
