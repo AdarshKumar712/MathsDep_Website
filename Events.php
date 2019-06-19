@@ -239,7 +239,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <?php
 
         foreach($file_arr as $file_value){
-                echo '<li><a onclick ="return con();" href="Delete.php?dir='.$dir.$file_value.'">'.$file_value.'</a></li>';
+                echo '<li><a onclick ="return con();" href="Delete_Event.php?dir='.$dir.$file_value.'">'.$file_value.'</a></li>';
           }
     ?>
   </span>
