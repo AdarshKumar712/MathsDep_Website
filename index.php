@@ -1,3 +1,16 @@
+<?php 
+    $dir1 = "./Events";
+    $Events_file = glob($dir1."/*.*");
+
+?>
+
+<?php
+    $dir2 = "./News";
+    $News_file = glob($dir2."/*.*");
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,24 +41,24 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
-        <li><a href="Prof_info.html">Professor Information</a></li>
+        <li><a href="Prof_info.php">Professor Information</a></li>
         <li>
           <div class="dropdown">
             <button class="dropbtn">Students Corner</button>
             <div class="dropdown-content">
-              <a href="./Students_Corner/First_Year/Index.html">First Year</a>
-              <a href="./Students_Corner/Second_Year/Index.html">Second Year</a>
-              <a href="./Students_Corner/Third_Year/Index.html">Third Year</a>
-              <a href="./Students_Corner/Fourth_Year/Index.html">Fourth Year</a>
-              <a href="./Students_Corner/Fifth_Year/Index.html">Fifth Year</a>
+              <a href="./Students_Corner/First_Year/Index.php">First Year</a>
+              <a href="./Students_Corner/Second_Year/Index.php">Second Year</a>
+              <a href="./Students_Corner/Third_Year/Index.php">Third Year</a>
+              <a href="./Students_Corner/Fourth_Year/Index.php">Fourth Year</a>
+              <a href="./Students_Corner/Fifth_Year/Index.php">Fifth Year</a>
             </div>
       </div></li>
         <li><a href="./Announcements.php">Announcements</a></li>
         <li><a href="./Join_us.php">Join Us</a></li>
-        <li><a href="./Contact_us.html">Contact Us</a></li>
+        <li><a href="./Contact_Us.php">Contact Us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="./login.php"><span class="glyphicon glyphicon-log-in"></span>Professor Login</a></li>
+        <li><a href="./login.php"><span class="glyphicon glyphicon-log-in"></span>Faculty Login</a></li>
       </ul>
     </div>
   </div>
@@ -176,17 +189,24 @@
     <div class="col-sm-2 sidenav">
       <div class="well">
         <p><h2>Events</h2></p>
-        <p><a href = "#">Link1</a></p>
-        <p><a href = '#'>Link2</a></p>
+        <?php 
+          foreach($Events_file as $file_value){
+                echo '<p><a href="'.$file_value.'">'.basename($file_value).'</a></p>';
+          }
+        ?>
       </div>
       <div class="well">
         <p><h2>News</h2></p>
-        <p><a href = "#">Link1</a></p>
-        <p><a href = '#'>Link2</a></p>
+        <?php
+          foreach($News_file as $file_value){
+                echo '<p><a href="'.$file_value.'">'.basename($file_value).'</a></p>';
+          }
+        ?>
       </div>
     </div>
   </div>
 </div>
+
 <footer class="container-fluid text-center">
   Follow us on : <a href = "#"><img src = "/Images/twitter.png" height= "10px" width = "10px" ></a> <a href = "#">@</a>
   <p>&copy All copyrights reserved to Mathematics Department</p>

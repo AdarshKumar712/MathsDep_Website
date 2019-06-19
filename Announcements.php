@@ -1,25 +1,20 @@
+<?php 
+    $dir1 = "./Events";
+    $Events_file = glob($dir1."/*.*");
+
+?>
+
+<?php
+    $dir2 = "./News";
+    $News_file = glob($dir2."/*.*");
+?>
+
+
 <?php
 
-  $count = 0;
-  $file_arr = array();
   $dir = "./Announcements/";
-  if (is_dir($dir)){
-    if($dh=opendir($dir))
-    {
-      while(($file= readdir($dh))!==false) {
-        $count= $count+1;
-        if ($count<3)
-          continue;
-        array_push($file_arr,"$file");
-      }
-    }
-    else
-      echo "Failed to open dir";
-  }
-else
-{
-  echo "Sorry not a directory";
-}
+  $file = glob($dir."/*.*");
+  $subfile = glob($dir."/*/*.*");
 
 ?>
 
@@ -36,7 +31,7 @@ else
   <script src="./jquery/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script>
   <link rel="stylesheet" type="text/css" href="main.css">
-  <link rel="stylesheet" type="text/css" href="./CSS/Announcements.css">
+  <link rel="stylesheet" type="text/css" href="./Announcements.css">
 
 </head>
 <body>
@@ -57,25 +52,25 @@ else
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="./Index.html">Home</a></li>
-        <li><a href="./Prof_info.html">Professor Information</a></li>
+        <li><a href="./index.php">Home</a></li>
+        <li><a href="./Prof_info.php">Professor Information</a></li>
         <li>
           <div class="dropdown">
             <button class="dropbtn">Students Corner</button>
             <div class="dropdown-content">
-              <a href="./Students_Corner/First_Year/Index.html">First Year</a>
-              <a href="./Students_Corner/Second_Year/Index.html">Second Year</a>
-              <a href="./Students_Corner/Third_Year/Index.html">Third Year</a>
-              <a href="./Students_Corner/Fourth_Year/Index.html">Fourth Year</a>
-              <a href="./Students_Corner/Fifth_Year/Index.html">Fifth Year</a>
+              <a href="./Students_Corner/First_Year/Index.php">First Year</a>
+              <a href="./Students_Corner/Second_Year/Index.php">Second Year</a>
+              <a href="./Students_Corner/Third_Year/Index.php">Third Year</a>
+              <a href="./Students_Corner/Fourth_Year/Index.php">Fourth Year</a>
+              <a href="./Students_Corner/Fifth_Year/Index.php">Fifth Year</a>
             </div>
       </div></li>
         <li class = "active"><a href="#">Announcements</a></li>
-        <li><a href="./Join_us.html">Join Us</a></li>
-        <li><a href="./Contact_us.html">Contact Us</a></li>
+        <li><a href="./Join_us.php">Join Us</a></li>
+        <li><a href="./Contact_Us.php">Contact Us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="./login.php"><span class="glyphicon glyphicon-log-in"></span>Professor Login</a></li>
+        <li><a href="./login.php"><span class="glyphicon glyphicon-log-in"></span>Faculty Login</a></li>
       </ul>
     </div>
   </div>
@@ -95,8 +90,11 @@ else
         <ul>
         <?php
 
-        foreach($file_arr as $file_value){
-                echo '<li><a href="'.$dir.$file_value.'">'.$file_value.'</a></li>';
+        foreach($file as $file_value){
+                echo '<li><a href="'.$file_value.'">'.basename($file_value).'</a></li>';
+          }
+        foreach($subfile as $file_value){
+                echo '<li><a href="'.$file_value.'">'.basename($file_value).'</a></li>';
           }
         ?>
       </fieldset>
@@ -105,13 +103,19 @@ else
     <div class="col-sm-2 sidenav">
       <div class="well">
         <p><h2>Events</h2></p>
-        <p><a href = "#">Link1</a></p>
-        <p><a href = '#'>Link2</a></p>
+        <?php 
+          foreach($Events_file as $file_value){
+                echo '<p><a href="'.$file_value.'">'.basename($file_value).'</a></p>';
+          }
+        ?>
       </div>
       <div class="well">
         <p><h2>News</h2></p>
-        <p><a href = "#">Link1</a></p>
-        <p><a href = '#'>Link2</a></p>
+        <?php
+          foreach($News_file as $file_value){
+                echo '<p><a href="'.$file_value.'">'.basename($file_value).'</a></p>';
+          }
+        ?>
       </div>
     </div>
   </div>

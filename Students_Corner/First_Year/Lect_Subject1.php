@@ -1,3 +1,19 @@
+<?php 
+    $dir1 = "../../Events";
+    $Events_file = glob($dir1."/*.*");
+
+?>
+
+<?php
+    $dir2 = "../../News";
+    $News_file = glob($dir2."/*.*");
+?>
+
+<?php
+    $dir = "./Lecture_Notes/1/";
+    $file = glob($dir."*.*");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +24,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="main.css">
+  <style type="text/css">
+    .x{
+      padding: 20px;
+    }
+  </style>
+
 </head>
 <body>
 </body><header><div class="topnav">
@@ -27,25 +49,25 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="../../index.html">Home</a></li>
-        <li><a href="../../Prof_info.html">Professor Information</a></li>
+        <li><a href="../../index.php">Home</a></li>
+        <li><a href="../../Prof_info.php">Professor Information</a></li>
         <li class="active">
           <div class="dropdown">
             <button class="dropbtn">Students Corner</button>
             <div class="dropdown-content">
-              <a href="../First_Year/Index.html">First Year</a>
-              <a href="../Second_Year/Index.html">Second Year</a>
-              <a href="../Third_Year/Index.html">Third Year</a>
-              <a href="../Fourth_Year/Index.html">Fourth Year</a>
-              <a href="../Fifth_Year/Index.html">Fifth Year</a>
+              <a href="../First_Year/Index.php">First Year</a>
+              <a href="../Second_Year/Index.php">Second Year</a>
+              <a href="../Third_Year/Index.php">Third Year</a>
+              <a href="../Fourth_Year/Index.php">Fourth Year</a>
+              <a href="../Fifth_Year/Index.php">Fifth Year</a>
             </div>
       </div></li>
         <li><a href="../../Announcements.php">Announcements</a></li>
         <li><a href="../../Join_us.php">Join Us</a></li>
-        <li><a href="../../Contact_us.html">Contact Us</a></li>
+        <li><a href="../../Contact_Us.php">Contact Us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="../../login.php"><span class="glyphicon glyphicon-log-in"></span>Professor Login</a></li>
+        <li><a href="../../login.php"><span class="glyphicon glyphicon-log-in"></span>Faculty Login</a></li>
       </ul>
     </div>
   </div>
@@ -59,35 +81,31 @@
       <p><a href="#">IIT Kgp Main Wbsite</a></p>
       <p><a href="#">MetaKgp</a></p>
     </div>
-    <div class="col-sm-8 text-left">
-      <h1><i>For Second Year Students:</i></h1><hr>
-      <a><h3></h3></a>
-      <ul>
-        <li><b><a href="./Announcements.php">Related Announcements and Notifications</a></b></li><br><br>
-        <li><b>Lecture Notes</b><br><br>
-            <ul>
-              <li><a href="#"><i>Subject 1</i></a></li>
-              <li><a href="#"><i>Subject 2</i></a></li>
-            </ul>
-        </li><br><br>
-        <li><b>Assignments</b><br><br>
-            <ul>
-              <li><a href="#"><i>Subject 1</i></a></li>
-              <li><a href="#"><i>Subject 2</i></a></li>
-            </ul></li>
-        </ul>
-      </ul>        
+    <div class="col-sm-8 text-left x">
+      <h1><i>Lecture Notes:</i></h1><hr>
+      <strong><i>Here you can find link to the Notes and Slides for the subject ___ of your course</i></strong><br><br>
+        <?php
+        foreach($file as $file_value){
+                echo '<li><a href="'.$file_value.'">'.basename($file_value).'</a></li>';
+                } 
+        ?>
     </div><br>
     <div class="col-sm-2 sidenav">
       <div class="well">
         <p><h2>Events</h2></p>
-        <p><a href = "#">Link1</a></p>
-        <p><a href = '#'>Link2</a></p>
+        <?php 
+          foreach($Events_file as $file_value){
+                echo '<p><a href="'.$file_value.'">'.basename($file_value).'</a></p>';
+          }
+        ?>
       </div>
       <div class="well">
         <p><h2>News</h2></p>
-        <p><a href = "#">Link1</a></p>
-        <p><a href = '#'>Link2</a></p>
+        <?php
+          foreach($News_file as $file_value){
+                echo '<p><a href="'.$file_value.'">'.basename($file_value).'</a></p>';
+          }
+        ?>
       </div>
     </div>
   </div>

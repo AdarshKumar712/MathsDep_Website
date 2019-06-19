@@ -1,3 +1,14 @@
+<?php 
+    $dir1 = "./Events";
+    $Events_file = glob($dir1."/*.*");
+?>
+
+<?php
+    $dir2 = "./News";
+    $News_file = glob($dir2."/*.*");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,17 +39,17 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="Prof_info.html">Professor Information</a></li>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="Prof_info.php">Professor Information</a></li>
         <li>
           <div class="dropdown">
             <button class="dropbtn">Students Corner</button>
             <div class="dropdown-content">
-              <a href="./Students_Corner/First_Year/Index.html">First Year</a>
-              <a href="./Students_Corner/Second_Year/Index.html">Second Year</a>
-              <a href="./Students_Corner/Third_Year/Index.html">Third Year</a>
-              <a href="./Students_Corner/Fourth_Year/Index.html">Fourth Year</a>
-              <a href="./Students_Corner/Fifth_Year/Index.html">Fifth Year</a>
+              <a href="./Students_Corner/First_Year/Index.php">First Year</a>
+              <a href="./Students_Corner/Second_Year/Index.php">Second Year</a>
+              <a href="./Students_Corner/Third_Year/Index.php">Third Year</a>
+              <a href="./Students_Corner/Fourth_Year/Index.php">Fourth Year</a>
+              <a href="./Students_Corner/Fifth_Year/Index.php">Fifth Year</a>
             </div>
       </div></li>
         <li><a href="./Announcements.php">Announcements</a></li>
@@ -46,7 +57,7 @@
         <li class = "active"><a href="#">Contact us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="./login.php"><span class="glyphicon glyphicon-log-in"></span>Professor Login</a></li>
+        <li><a href="Login.php"><span class="glyphicon glyphicon-log-in"></span>Faculty Login</a></li>
       </ul>
     </div>
   </div>
@@ -55,10 +66,9 @@
 <div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-2 sidenav">
-      <p><h4>Direct Links</h4></p>
-      <p><a href="#">Erp Login</a></p>
-      <p><a href="#">IIT Kgp Main Wbsite</a></p>
-      <p><a href="#">MetaKgp</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
     </div>
     <div class="col-sm-8 text-left">
     <h2>Contact Details</h2>
@@ -88,10 +98,20 @@
   </form>
     <div class="col-sm-2 sidenav">
       <div class="well">
-        <p></p>
+        <p><h2>Events</h2></p>
+        <?php 
+          foreach($Events_file as $file_value){
+                echo '<p><a href="'.$file_value.'">'.basename($file_value).'</a></p>';
+          }
+        ?>
       </div>
       <div class="well">
-        <p></p>
+        <p><h2>News</h2></p>
+        <?php
+          foreach($News_file as $file_value){
+                echo '<p><a href="'.$file_value.'">'.basename($file_value).'</a></p>';
+          }
+        ?>
       </div>
     </div>
   </div>
