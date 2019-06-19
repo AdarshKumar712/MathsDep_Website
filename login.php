@@ -1,3 +1,14 @@
+<?php 
+    $dir1 = "./Events";
+    $Events_file = glob($dir1."/*.*");
+
+?>
+
+<?php
+    $dir2 = "./News";
+    $News_file = glob($dir2."/*.*");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +18,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="./CSS/main.css">
-  <link rel="stylesheet" type="text/css" href="./CSS/login.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="./login.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -29,25 +40,25 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="./Index.html">Home</a></li>
-        <li><a href="./Prof_info.html">Professor Information</a></li>
+        <li><a href="./index.php">Home</a></li>
+        <li><a href="./Prof_info.php">Professor Information</a></li>
         <li>
           <div class="dropdown">
             <button class="dropbtn">Students Corner</button>
             <div class="dropdown-content">
-              <a href="./Students_Corner/First_Year/Index.html">First Year</a>
-              <a href="./Students_Corner/Second_Year/Index.html">Second Year</a>
-              <a href="./Students_Corner/Third_Year/Index.html">Third Year</a>
-              <a href="./Students_Corner/Fourth_Year/Index.html">Fourth Year</a>
-              <a href="./Students_Corner/Fifth_Year/Index.html">Fifth Year</a>
+              <a href="./Students_Corner/First_Year/Index.php">First Year</a>
+              <a href="./Students_Corner/Second_Year/Index.php">Second Year</a>
+              <a href="./Students_Corner/Third_Year/Index.php">Third Year</a>
+              <a href="./Students_Corner/Fourth_Year/Index.php">Fourth Year</a>
+              <a href="./Students_Corner/Fifth_Year/Index.php">Fifth Year</a>
             </div>
       </div></li>
-        <li><a href="#">Announcements</a></li>
-        <li><a href="./Join_Us">Join Us</a></li>
-        <li><a href="./Contact_us.html">Contact us</a></li>
+        <li><a href="./Announcements.php">Announcements</a></li>
+        <li><a href="./Join_Us.php">Join Us</a></li>
+        <li><a href="./Contact_Us.php">Contact us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class = "active"><a href="#"><span class="glyphicon glyphicon-log-in"></span>Professor Login</a></li>
+        <li class = "active"><a href="#"><span class="glyphicon glyphicon-log-in"></span>Faculty Login</a></li>
       </ul>
     </div>
   </div>
@@ -72,21 +83,30 @@
                 <table><tbody><tr><td>Password</td>
                 <td><input type="password" name="Password" placeholder="Enter your password"></td></tr></tbody></table>
               </div><br>
-              <input type = "submit" name = "submit" value = "Login" class = "btn-login">
+              <input type = "submit" name = "submit" value = "Login" class = "btn-login"><br><br>
             </fieldset>
           </form>
-          <?php echo $_SESSION['message'];?>
+          <?php 
+              if ($_GET['msg'])
+                 echo "<div class = 'success_message'>".base64_decode(urldecode($_GET['msg']))."</div>"; 
+           ?>
       </div><br><br><br></div>
 <div class="col-sm-2 sidenav">
       <div class="well">
         <p><h2>Events</h2></p>
-        <p><a href = "#">Link1</a></p>
-        <p><a href = '#'>Link2</a></p>
+        <?php 
+          foreach($Events_file as $file_value){
+                echo '<p><a href="'.$file_value.'">'.basename($file_value).'</a></p>';
+          }
+        ?>
       </div>
       <div class="well">
         <p><h2>News</h2></p>
-        <p><a href = "#">Link1</a></p>
-        <p><a href = '#'>Link2</a></p>
+        <?php
+          foreach($News_file as $file_value){
+                echo '<p><a href="'.$file_value.'">'.basename($file_value).'</a></p>';
+          }
+        ?>
       </div>
     </div>
   </div>
@@ -101,7 +121,6 @@
 <?php
           session_start();
 // Database connection parameters.
-          $_SESSION['message'] =  "";
 $servername = "localhost";
 $username = "root";
 $password = "root";
@@ -112,7 +131,7 @@ $con=mysqli_connect('localhost:3306','root','root') or die('sorry unable to conn
 if (isset($_POST['Username']))
 {
 $user=$_POST['Username'];  
-$pass=$_POST['Password']; 
+$pass=md5($_POST['Password']); 
 #echo $user.$pass; 
 #echo $con; 
 $query=mysqli_query($con,"SELECT * FROM loginform WHERE User='".$user."' AND Password='".$pass."'");  
@@ -129,17 +148,15 @@ if($numrows!=0)
     #echo $dbusername.$dbpassword;
     if($user == $dbusername && $pass == $dbpassword)  
     {  
-      
-        echo "<script>window.location.assign('Dashboard.php');</script>";  
+        echo "<script>window.location.assign('Dash.php');</script>";  
     } else {  
-        $_SESSION["message"] = "Invalid Username or password!";  
+        echo "Invalid Username or password!";  
     } 
     }
 else
   {
-    $_SESSION["message"] = "Tumse na ho paega";
+    echo "Sorry some Error happened!!!!!!!";
   }
 }
-
 
 ?>
