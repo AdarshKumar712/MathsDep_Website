@@ -1,0 +1,87 @@
+.supreme{
+	display: block;
+	padding: 20px;
+	margin-top: 60px;
+	margin-left: 60px;
+	margin-right: 60px;
+	margin-bottom:60px;
+	border-radius: 40px;
+	width:90%;
+	height :100%;
+}
+.minor{
+	display: block;
+	border-radius: 40px;
+	border-top-left-radius: 20px;
+	width:95%;
+}
+
+table {
+	float:left; 
+	margin-left:30px;
+	width: 50%;
+
+}
+
+.prof_img{
+	float:right;
+	height:100px;
+	width:100px;
+	margin-right: 20px;
+}
+
+
+.a::after{
+	clear:both;
+}
+
+.dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color:#000000 ;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container1 {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+  transition: 1s ease-in;
+}
+.dropdown-container {
+  display: block;
+  background-color: #262626;
+  padding-left: 8px;
+  transition: 1s ease-in;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+.Overview{
+	margin-top: 60px;
+	margin-left: 70px;
+	margin-right: 60px;
+	margin-bottom:60px;
+	border-radius: 40px;
+}
+
+#more {
+  display : none;
+}
+
