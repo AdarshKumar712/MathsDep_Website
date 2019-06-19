@@ -57,7 +57,7 @@
         <li class = "active"><a href="#">Contact us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="Login.php"><span class="glyphicon glyphicon-log-in"></span>Faculty Login</a></li>
+        <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span>Faculty Login</a></li>
       </ul>
     </div>
   </div>

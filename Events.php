@@ -32,7 +32,7 @@
     {
       $id = $Userdata['id'];
       $filename = $_FILES['file']['name'];
-      $file_path = $mysqli->real_escape_string('./Announcements/'.$id."/".$_FILES['file']['name']);
+      $file_path = $mysqli->real_escape_string('./Events/'.$_FILES['file']['name']);
       if (file_exists($file_path)!==true){
       if (copy($_FILES['file']['tmp_name'],$file_path))
         {
@@ -56,7 +56,7 @@
           {
              $id = $Userdata['id'];
              $filename = $_FILES['file']['name'];
-             $file_path = $mysqli->real_escape_string('./Announcements/'.$id."/".$_POST['Rename']);
+             $file_path = $mysqli->real_escape_string('./Events/'.$_POST['Rename']);
              if (file_exists($file_path)!==true){
              if (copy($_FILES['file']['tmp_name'],$file_path))
           {
@@ -202,7 +202,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
   $count = 0;
   $file_arr = array();
-  $dir = $dir.$Userdata['id']."/";
   if (is_dir($dir))
   {
     if($dh=opendir($dir))
