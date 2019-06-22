@@ -109,10 +109,10 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <a href="./Students_Corner/Fifth_Year/Assignments.php" class="w3-bar-item w3-button w3-padding w3-blue">Fifth Year</a>
   </div>
   <a href="./Events.php" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i> Events</a>
-  <a onclick = "return con()" href="logout.php" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-power-off"></i> Logout</a>
+  <a onclick = "return con1()" href="logout.php" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-power-off"></i> Logout</a>
   </div>
 <script type="text/javascript">
-  function con() {
+  function con1() {
     var r = confirm("Are you sure you want to logout?");
     if (r==true)
     {
