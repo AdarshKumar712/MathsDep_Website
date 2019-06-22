@@ -2,9 +2,20 @@
 Website for the department of Mathematics, IIT Kharagpur
 
 # Purpose
-Purpose of this website is to the serve for the benifit of the students of Mathematics and Computing  and to provide a better interface between Professors and Students
+Purpose of this website is to the serve for the benifit of the students of Mathematics and Computing at IIT Kharagpur and to provide a better interface between Professors and Students
 
 # Details/Components
-Index.html - home page<br>
-Contact_Us.html - to get contact details or to submit some query
+<ul>
+  <li>index.php - home page<br></li>
+  <li>Prof_info.php - a page to search about the professors/faculty of the department<br></li>
+<li>Announcements.php - Here you will be able to find all the new announcements by the professors and faculty<br></li>
+<li>Students Corner - specifically meant for the students, under this section you can find all the recent yearwise announcements,                               lecture_notes,assignments uploaded ny the faculty<br></li>
+  <li>Join_us.php - a registeration page<br></li>
+  <li>Contact_Us.php - to get contact details or to submit some query<br></li>
+  <li>login.php - for login purpose of the faculty and admin<br></li>
+  </ul>
+
+# Other details
+This repository make use of the boootstrap templates. With the help oh Php,html,javascript, it tries to create a userfriendly interface between client(faculty/student) and the database.  
+
 
