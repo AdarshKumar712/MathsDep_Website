@@ -128,7 +128,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container1">
-    <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-globe"></i> Global</a>
+    <a href="./Dash_announc_global.php" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-globe"></i> Global</a>
     <a href="./Students_Corner/First_Year/Dash_announce.php" class="w3-bar-item w3-button w3-padding w3-blue">First Year</a>
     <a href="./Students_Corner/Second_Year/Dash_announce.php" class="w3-bar-item w3-button w3-padding w3-blue">Second Year</a>
     <a href="./Students_Corner/Third_Year/Dash_announce.php" class="w3-bar-item w3-button w3-padding w3-blue">Third Year</a>
