@@ -13,6 +13,7 @@
       $array['Username'] = $r['User'];
       $array['Name'] = $r['Name'];
       $array['Place'] = $r['Place'];
+      $array['password'] = $r['Password'];
       $array['Position'] = $r['Position'];
       $array['Email'] = $r['Email'];
       $array['Image'] = $r['Image'];
