@@ -18,6 +18,32 @@ Purpose of this website is to the serve for the benifit of the students of Mathe
   <li>Announc_global.php - Page which allows professor to Upload/Delete the documents meant for the whole department<br></li>
   </ul>
 
+# Installation
+### Primary Installation:
+1. Install any apache software for server hosting like XAMPP or MAMP.
+    <ul>
+    <li>[Download XAMPP](https://www.apachefriends.org/download.html)</li>
+    <li>[Download MAMP](https://www.mamp.info/en/downloads/)</li>
+    </ul>
+    and more you can google.....<br> 
+2. Clone the repository, and navigate to the downloaded folder.<br>
+3. Move the downloaded Zip file related to the repository to the htdocs folder in the XAMPP/MAMP folder whereever you have installed          it(XAMPP/MAMP) and then unzip the file.<br>
+4. Suppose your host app is MAMP, then run the MAMP and then click <b>Start Servers</b>(<i>Though in general it starts automatically</i>).<br>
+5. Click "Open WebStart page". New Window opens in the browser. From the webpage opened in browser, click "My Website".<br>
+6. Select the Mathematics Website folder from Index.<br>
+  <br>
+  <t><b>Website is all set to surf!!!!!!!!</b><br>
+
+### Installing the Database for Login
+1. Run MAMP/XAMPP, then Click "Open WebStart Page".<br>
+2. Select "phpMyAdmin" from drop down of "Tools" menu.<br>
+3. Now in phpMyAdmin, create a new database named "demo".<br>
+4. After creating the database, click "Import" tab. Then under choose file, select the 'loginform.sql' file from MY SQL folder in the Maths Website folder.<br>
+<br>
+<b> Now the login page is also set </b>
+<br>
+**Note: Password you can find out using the decrypt web application.
+
 # Other details
 This repository make use of the boootstrap templates. With the help oh Php,html,javascript, it tries to create a userfriendly interface between client(faculty/student) and the database.  
 
