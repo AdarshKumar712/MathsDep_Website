@@ -285,3 +285,32 @@ td{
 .search_prof{
   width: 100%;
 }
+
+/* Home Navigation Bar */
+
+#home-navbar {
+	padding-left: 5px;
+	padding-right: 0px;
+	padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+#home-navbar-list {
+	text-align: left;
+	list-style: none;
+	padding-left: 0px;
+}
+
+#home-navbar-list .home-navbar-item {
+	padding: 10px;
+	border-left: 3px #b8b6b6 solid;
+	margin-bottom: 10px;
+}
+
+#home-navbar-list .home-navbar-item:hover {
+	background-color: #bdbdbd;
+	border-left: 3px #333333 solid;
+	color: whitesmoke;
+	cursor: pointer;
+}
