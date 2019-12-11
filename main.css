@@ -56,6 +56,11 @@
       background-color: #555;
       color: white;
       padding: 15px;
+      overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
@@ -247,6 +252,8 @@ img {vertical-align: middle;}
 .fa-facebook {
   background: #3B5998;
   color: white;
+  width: 10px;
+  height: 10px;
 }
 
 .fa-twitter {
