@@ -16,6 +16,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="./jquery/jquery.js"></script>
@@ -30,6 +32,53 @@
       padding: 20px;
       margin-bottom: 20px
     }
+
+    .search_prof_heading
+    {
+      text-align: center;
+      font-family: 'Shadows Into Light', cursive;
+      font-size: 2vw;
+      font-weight: bold;
+      color: black;
+    }
+    #search
+    {
+      margin-left: 37.5%;
+      width: 25%;
+      height: 2.2vw;
+      border-radius: 2vw;
+      border-style: solid;
+      font-family: 'Shadows Into Light', cursive;
+      font-size: 1.5vw;
+      text-align: center;
+      background-color: aliceblue;
+    }
+    #output
+    {
+      display: none;
+      font-family: 'Patrick Hand', cursive;
+      font-size:1.5vw;
+      text-align:left;
+      padding-left: 10%;
+      background:linear-gradient(to bottom right, rgba(0,255,255,0.7), rgba(0,90,255,0.7));
+      border-radius:4vw;
+      padding-top:5%;
+      padding-bottom:5%;
+      box-shadow:10px 10px 10px rgba(0,0,0,0.5);
+    }
+      
+      #prof_photo
+      {
+          width: 13vw;
+          height: 13vw;
+          border-radius: 10vw;
+          background-color: pink;
+          margin-left:65%;
+          position: absolute;
+          top: 42%;
+          display: none;
+          border: solid 0.2vw black;
+      }
   </style>
 
 </head>
@@ -85,8 +134,8 @@
     <div class="col-sm-8 text-left">
     <form class = "search_prof">
       <fieldset>
-        <legend>Search by Professor name</legend>
-        <input id = "search" list = "names">
+        <legend class="search_prof_heading">Search by Professor name</legend>
+        <input id = "search" list = "names" placeholder="Select name of Prof.">
             <datalist id = "names">
               <option value = "Adrijit Goswami">
               <option value = "Ashish Ganguly">
@@ -126,7 +175,7 @@
             </datalist> 
             <br><br><br>
             <script type='text/javascript' src='./test.js'></script>
-    <fieldset border = "2px"><div id = "output"></div></fieldset>
+    <fieldset border = "2px"><div id = "output"></div><div id="prof_photo"></div></fieldset>
       </fieldset>
     </form>
     <div class = "result">
