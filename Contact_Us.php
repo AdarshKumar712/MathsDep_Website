@@ -22,12 +22,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-</body><header><div class="topnav">
-  <img src = "./Images/logo.jpg" height = "80" width = "80">
-  <div class = "text1">
-      <i><font size = "14px">D</font>epartment of <b><font size = "14px">M</font>athematics<br>IIT Kharagpur</b></i>
-  </div>
-</div></header>
+</body>
+<header>
+    <div class="topnav">
+        <img src = "./Images/logo1.png" height = "120 " width = "120">
+        <div class = "text1">
+            <font id="dept"><b>DEPARTMENT OF </b></font> 
+            <font id="math">MATHEMATICS</font><br>
+            <font id="iit">INDIAN INSTITUTE OF TECHNOLOGY KHARAGPUR</font>
+        </div>
+    </div>
+</header>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -41,9 +46,9 @@
       <ul class="nav navbar-nav">
         <li><a href="index.php">Home</a></li>
         <li><a href="Prof_info.php">Professor Information</a></li>
-        <li>
+        <li id="stud">
           <div class="dropdown">
-            <button class="dropbtn">Students Corner</button>
+            <button class="dropbtn">Students' Corner</button>
             <div class="dropdown-content">
               <a href="./Students_Corner/First_Year/Index.php">First Year</a>
               <a href="./Students_Corner/Second_Year/Index.php">Second Year</a>
@@ -57,7 +62,7 @@
         <li class = "active"><a href="#">Contact us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span>Faculty Login</a></li>
+        <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Faculty Login</a></li>
       </ul>
     </div>
   </div>
