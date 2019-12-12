@@ -16,7 +16,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Spectral:700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -36,9 +37,9 @@
     .search_prof_heading
     {
       text-align: center;
-      font-family: 'Shadows Into Light', cursive;
+      font-family: 'Spectral', serif;
+      font-weight:bold;
       font-size: 2vw;
-      font-weight: bold;
       color: black;
     }
     #search
@@ -48,8 +49,9 @@
       height: 2.2vw;
       border-radius: 2vw;
       border-style: solid;
-      font-family: 'Shadows Into Light', cursive;
-      font-size: 1.5vw;
+      font-family: 'Spectral', serif;
+      font-size: 1.4vw;
+      font-weight:100;
       text-align: center;
       background-color: aliceblue;
     }
