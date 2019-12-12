@@ -58,7 +58,7 @@
     #output
     {
       display: none;
-      font-family: 'Patrick Hand', cursive;
+      font-family: 'Spectral', serif;
       font-size:1.5vw;
       text-align:left;
       padding-left: 10%;
