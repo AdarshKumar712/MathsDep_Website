@@ -140,7 +140,7 @@
         <input id = "search" list = "names" placeholder="Select name of Prof.">
             <datalist id = "names">
               <option value = "Adrijit Goswami">
-              <option value = "Ashish Ganguly">
+              <option value = "Asish Ganguly">
               <option value = "Bappaditya Bhowmik">
               <option value = "Bibhas Adhikari">
               <option value = "Biswa Nath Datta">
@@ -214,3 +214,4 @@
 
 </body>
 </html>
+

@@ -18,12 +18,13 @@ async function test (){
     };
    var fuse = new Fuse(list, options);
    var result = await fuse.search(document.getElementById('search').value);
+   var x = document.getElementById('search').value;
     document.getElementById('output').style.display='block';
-   document.getElementById('output').innerHTML = "";
+    document.getElementById('output').innerHTML = "";
     //Code for photo of prof starts here
     document.getElementById('prof_photo').style.display='block';
-    document.getElementById('prof_photo').style.backgroundImage="url('./Images/default-avatar.png')";
-    document.getElementById('prof_photo').style.backgroundSize="cover";
+    document.getElementById('prof_photo').style.background="url('./Images/Professor_photo/"+x+".jpeg')";
+    document.getElementById('prof_photo').style.backgroundSize="100% 100%";
     document.getElementById('prof_photo').style.backgroundRepeat="no-repeat";
     //Code for photo of prof ends here
    result.forEach((element,index) => {
