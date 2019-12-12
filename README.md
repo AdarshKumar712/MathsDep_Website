@@ -44,6 +44,9 @@ Purpose of this website is to the serve for the benifit of the students of Mathe
 <br>
 **Note: Password you can find out using the decrypt web application.
 
+### Contribution
+Those who want to contribute in this project, go through CONTRIBUTION_KWOC.md
+
 # Other details
 This repository make use of the boootstrap templates. With the help oh Php,html,javascript, it tries to create a userfriendly interface between client(faculty/student) and the database.  
 
