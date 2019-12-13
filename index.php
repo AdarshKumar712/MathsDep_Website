@@ -66,12 +66,12 @@
   
 <div class="container-fluid text-center">    
   <div class="row content">
-   <div class="col-sm-2" id="home-navbar">
+   <div class="col-sm-2" id="sidebar">
 		<h4 style="text-align: center; margin-bottom: 15px">Direct Links</h4>
-		<ul id="home-navbar-list">
-			<li href="#" class="home-navbar-item">Erp Login</li>
-			<li href="#" class="home-navbar-item">IIT Kgp Main Website</li>
-			<li href="#" class="home-navbar-item">MetaKgp</li>
+		<ul id="sidebar-list">
+			<li href="#" class="sidebar-item">Erp Login</li>
+			<li href="#" class="sidebar-item">IIT Kgp Main Website</li>
+			<li href="#" class="sidebar-item">MetaKgp</li>
 		</ul>
     </div>
     <div class="col-sm-8 text-left">

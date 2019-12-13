@@ -286,9 +286,9 @@ td{
   width: 100%;
 }
 
-/* Home Navigation Bar */
+/* Sidebar */
 
-#home-navbar {
+#sidebar {
 	padding-left: 5px;
 	padding-right: 0px;
 	padding-top: 20px;
@@ -296,19 +296,19 @@ td{
     height: 100%;
 }
 
-#home-navbar-list {
+#sidebar-list {
 	text-align: left;
 	list-style: none;
 	padding-left: 0px;
 }
 
-#home-navbar-list .home-navbar-item {
+#sidebar-list .sidebar-item {
 	padding: 10px;
 	border-left: 3px #b8b6b6 solid;
 	margin-bottom: 10px;
 }
 
-#home-navbar-list .home-navbar-item:hover {
+#sidebar-list .sidebar-item:hover {
 	background-color: #bdbdbd;
 	border-left: 3px #333333 solid;
 	color: whitesmoke;
