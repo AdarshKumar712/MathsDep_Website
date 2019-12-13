@@ -64,11 +64,13 @@
   
 <div class="container-fluid text-center">    
   <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <p><h4>Direct Links</h4></p>
-      <p><a href="#">Erp Login</a></p>
-      <p><a href="#">IIT Kgp Main Wbsite</a></p>
-      <p><a href="#">MetaKgp</a></p>
+    <div class="col-sm-2" id="sidebar">
+		<h4 style="text-align: center; margin-bottom: 15px">Direct Links</h4>
+		<ul id="sidebar-list">
+			<li href="#" class="sidebar-item">Erp Login</li>
+			<li href="#" class="sidebar-item">IIT Kgp Main Website</li>
+			<li href="#" class="sidebar-item">MetaKgp</li>
+		</ul>
     </div>
     <div class="col-sm-8 text-left">
       <h1><i>For Fifth Year Students:</i></h1><hr>

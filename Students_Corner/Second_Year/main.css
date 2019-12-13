@@ -285,3 +285,33 @@ td{
 .search_prof{
   width: 100%;
 }
+
+
+/* Sidebar */
+
+#sidebar {
+	padding-left: 5px;
+	padding-right: 0px;
+	padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+#sidebar-list {
+	text-align: left;
+	list-style: none;
+	padding-left: 0px;
+}
+
+#sidebar-list .sidebar-item {
+	padding: 10px;
+	border-left: 3px #b8b6b6 solid;
+	margin-bottom: 10px;
+}
+
+#sidebar-list .sidebar-item:hover {
+	background-color: #bdbdbd;
+	border-left: 3px #333333 solid;
+	color: whitesmoke;
+	cursor: pointer;
+}
