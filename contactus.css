@@ -1,0 +1,29 @@
+/*changes in contact us form!*/
+
+.inputs {
+    width: 80%;
+    height: 45px;
+    margin-bottom: 10px;
+    border-radius: 23px;
+    border: 1px solid gray;
+    padding-right: 13px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 36px;
+}
+#query {
+    height: 150px;
+}
+#submit_query {
+    font-size: large;
+    padding: 0px;
+    font-weight: bold;
+    color: white;
+    background: #4CAF50;
+}
+#submit_query:hover {
+    background: #46a049;
+}
+.inputs:focus {
+    outline: none;
+}
