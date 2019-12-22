@@ -169,7 +169,7 @@
 </div>
 
 <footer class="container-fluid text-center">
-  Follow us on : <a href = "https://facebook.com" class = "fa fa-facebook" title="Facebook"></a>
+  Follow us on : <a href = "#"><img src = "/Images/twitter.png" height= "10px" width = "10px" ></a> <a href = "#">@</a></a>
   <p>&copy All copyrights reserved to Mathematics Department</p>
 
 </footer>
