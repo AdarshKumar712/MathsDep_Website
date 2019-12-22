@@ -85,12 +85,17 @@
 
 </head>
 <body>
-</body><header><div class="topnav">
-  <img src = "./Images/logo.jpg" height = "80" width = "80">
-  <div class = "text1">
-      <i><font size = "14px">D</font>epartment of <b><font size = "14px">M</font>athematics<br>IIT Kharagpur</b></i>
-  </div>
-</div></header>
+</body>
+    <header>
+    <div class="topnav">
+        <img src = "./Images/logo1.png" height = "120 " width = "120">
+        <div class = "text1">
+            <font id="dept"><b>DEPARTMENT OF </b></font> 
+            <font id="math">MATHEMATICS</font><br>
+            <font id="iit">INDIAN INSTITUTE OF TECHNOLOGY KHARAGPUR</font>
+        </div>
+    </div>
+</header>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
