@@ -9,6 +9,7 @@
     $News_file = glob($dir2."/*.*");
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,19 +20,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="main.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-    <div class="topnav">
-        <img src = "./Images/logo1.png" height = "120 " width = "120">
-        <div class = "text1">
-            <font id="dept"><b>DEPARTMENT OF </b></font> 
-            <font id="math">MATHEMATICS</font><br>
-            <font id="iit">INDIAN INSTITUTE OF TECHNOLOGY KHARAGPUR</font>
-        </div>
-    </div>
-</header>
+</body><header><div class="topnav">
+  <img src = "./Images/logo.jpg" height = "80" width = "80">
+  <div class = "text1">
+      <i><font size = "14px">D</font>epartment of <b><font size = "14px">M</font>athematics<br>IIT Kharagpur</b></i>
+  </div>
+</div></header>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -45,9 +41,9 @@
       <ul class="nav navbar-nav">
         <li><a href="../../index.php">Home</a></li>
         <li><a href="../../Prof_info.php">Professor Information</a></li>
-        <li id="stud" class="active">
+        <li class="active">
           <div class="dropdown">
-            <button class="dropbtn">Students' Corner</button>
+            <button class="dropbtn">Students Corner</button>
             <div class="dropdown-content">
               <a href="../First_Year/Index.php">First Year</a>
               <a href="../Second_Year/Index.php">Second Year</a>
@@ -61,7 +57,7 @@
         <li><a href="../../Contact_Us.php">Contact Us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="../../login.php"><span class="glyphicon glyphicon-log-in"></span> Faculty Login</a></li>
+        <li><a href="../../login.php"><span class="glyphicon glyphicon-log-in"></span>Faculty Login</a></li>
       </ul>
     </div>
   </div>
@@ -69,11 +65,13 @@
   
 <div class="container-fluid text-center">    
   <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <p><h4>Direct Links</h4></p>
-      <p><a href="#">Erp Login</a></p>
-      <p><a href="#">IIT Kgp Main Wbsite</a></p>
-      <p><a href="#">MetaKgp</a></p>
+    <div class="col-sm-2" id="sidebar">
+		<h4 style="text-align: center; margin-bottom: 15px">Direct Links</h4>
+		<ul id="sidebar-list">
+			<li href="#" class="sidebar-item">Erp Login</li>
+			<li href="#" class="sidebar-item">IIT Kgp Main Website</li>
+			<li href="#" class="sidebar-item">MetaKgp</li>
+		</ul>
     </div>
     <div class="col-sm-8 text-left">
       <h1><i>For Second Year Students:</i></h1><hr>

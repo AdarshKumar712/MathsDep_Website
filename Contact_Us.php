@@ -92,10 +92,13 @@
 
 <div class="container-fluid text-center">    
   <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
+    <div class="col-sm-2" id="sidebar">
+		<h4 style="text-align: center; margin-bottom: 15px">Direct Links</h4>
+		<ul id="sidebar-list">
+			<li href="#" class="sidebar-item">Link</li>
+			<li href="#" class="sidebar-item">Link</li>
+			<li href="#" class="sidebar-item">Link</li>
+		</ul>
     </div>
     <div class="col-sm-8 text-left" style="background: linear-gradient(white, #d1d1d1);">
       <div style="float: left;">
