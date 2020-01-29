@@ -26,7 +26,14 @@
   $_SESSION['message'] = "";
   $_SESSION['message3'] = "";
   $dir = "./Announcements/";
+  $Userdata = array();
+  if (isset($_SESSION['Username'])){
   $Userdata = getUserData($_SESSION['Username']);
+  }
+  else
+  {
+    echo "<script>window.location.assign('./login.php?msg=".urlencode(base64_encode('You have been Logged out successfully'))."');</script>";
+  }
   $id = $Userdata['id'];
 ?>
 <?php

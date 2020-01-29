@@ -23,7 +23,14 @@
   }
   $_SESSION['message'] = "";
   $dir = "./Lecture_Notes/";
+  $Userdata = array();
+  if (isset($_SESSION['Username'])){
   $Userdata = getUserData($_SESSION['Username']);
+  }
+  else
+  {
+    echo "<script>window.location.assign('../login.php?msg=".urlencode(base64_encode('You have been Logged out successfully'))."');</script>";
+  }
 ?>
 <?php
     
