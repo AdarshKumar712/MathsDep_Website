@@ -68,7 +68,7 @@
       <ul class="nav navbar-nav">
         <li><a href="index.php">Home</a></li>
         <li><a href="Prof_info.php">Professor Information</a></li>
-        <li id="stud">
+        <!-- <li id="stud">
           <div class="dropdown">
             <button class="dropbtn">Students' Corner</button>
             <div class="dropdown-content">
@@ -78,14 +78,14 @@
               <a href="./Students_Corner/Fourth_Year/Index.php">Fourth Year</a>
               <a href="./Students_Corner/Fifth_Year/Index.php">Fifth Year</a>
             </div>
-      </div></li>
+      </div></li> -->
         <li><a href="./Announcements.php">Announcements</a></li>
-        <li><a href="./Join_us.php">Join Us</a></li>
+        <!-- <li><a href="./Join_us.php">Join Us</a></li> -->
         <li class = "active"><a href="#">Contact us</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <!-- <ul class="nav navbar-nav navbar-right">
         <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Faculty Login</a></li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 </nav>
@@ -172,7 +172,7 @@
 </div>
 
 <footer class="container-fluid text-center">
-  Follow us on : <a href = "#"><img src = "/Images/twitter.png" height= "10px" width = "10px" ></a> <a href = "#">@</a></a>
+  <!-- Follow us on : <a href = "#"><img src = "/Images/twitter.png" height= "10px" width = "10px" ></a> <a href = "#">@</a></a> -->
   <p>&copy All copyrights reserved to Mathematics Department</p>
 
 </footer>

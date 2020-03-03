@@ -23,12 +23,23 @@
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-</body><header><div class="topnav">
+</body>
+<!-- <header><div class="topnav">
   <img src = "./Images/logo.jpg" height = "80" width = "80">
   <div class = "text1">
       <i><font size = "14px">D</font>epartment of <b><font size = "14px">M</font>athematics<br>IIT Kharagpur</b></i>
   </div>
-</div></header>
+</div></header> -->
+<header>
+    <div class="topnav">
+        <img src = "./Images/logo1.png" height = "120 " width = "120">
+        <div class = "text1">
+            <font id="dept"><b>DEPARTMENT OF </b></font> 
+            <font id="math">MATHEMATICS</font><br>
+            <font id="iit">INDIAN INSTITUTE OF TECHNOLOGY KHARAGPUR</font>
+        </div>
+    </div>
+</header>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -42,7 +53,7 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Home</a></li>
         <li><a href="Prof_info.php">Professor Information</a></li>
-        <li>
+        <!-- <li>
           <div class="dropdown">
             <button class="dropbtn">Students Corner</button>
             <div class="dropdown-content">
@@ -52,14 +63,14 @@
               <a href="./Students_Corner/Fourth_Year/Index.php">Fourth Year</a>
               <a href="./Students_Corner/Fifth_Year/Index.php">Fifth Year</a>
             </div>
-      </div></li>
+      </div></li> -->
         <li><a href="./Announcements.php">Announcements</a></li>
-        <li><a href="./Join_us.php">Join Us</a></li>
+        <!-- <li><a href="./Join_us.php">Join Us</a></li> -->
         <li><a href="./Contact_Us.php">Contact Us</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <!-- <ul class="nav navbar-nav navbar-right">
         <li><a href="./login.php"><span class="glyphicon glyphicon-log-in"></span>Faculty Login</a></li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 </nav>
@@ -82,19 +93,19 @@
           <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
             <img src="./Images/Dep.jpg" style="width:100%">
-            <div class="text">Department Building</div>
+            <!-- <div class="text">Department Building</div> -->
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
             <img src="./Images/Dep2.jpg" style="width:100%">
-            <div class="text">Department_photos</div>
+            <!-- <div class="text">Department photos</div> -->
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
             <img src="./Images/Dep3.jpg" style="width:100%">
-            <div class="text">Department_photos</div>
+            <!-- <div class="text">Department photos</div> -->
           </div>
 
           <!-- Next and previous buttons -->
@@ -161,7 +172,9 @@
           </script>
       <hr>
       <h2>About</h2>
-      <p style="font-family:Times New Roman;font-size:16px;">The Department of Mathematics has started in 1951 through the vision and untiring efforts of late Prof. B. R. Seth, the first head of the Department. With his dynamic leadership, a strong school of Continuum Mechanics came into existence. In fact, this school has become a pool to cater experts to various other new institutes that have come up consequently. In 1956, Prof. B. R. Seth took initiation to establish Indian Society of Theoretical and Applied Mechanics (ISTAM), one of the main forums where scientists, engineers, technologists, and mathematicians could interact and exchange <span id="dots">...</span><span id="more">ideas, has now achieved international recognition.<br>
+      <p style="font-family:Times New Roman;font-size:16px;">The Department of Mathematics has started in 1951 through the vision and untiring efforts of late Prof. B. R. Seth, the first head of the Department. With his dynamic leadership, a strong school of Continuum Mechanics came into existence. In fact, this school has become a pool to cater experts to various other new institutes that have come up consequently. In 1956, Prof. B. R. Seth took initiation to establish Indian Society of Theoretical and Applied Mechanics (ISTAM), one of the main forums where scientists, engineers, technologists, and mathematicians could interact and exchange 
+      <br />
+      <span>ideas, has now achieved international recognition.<br>
 
       In subsequent years, the department has attracted faculty with diversified expertise, for example, Statistics and Quality Control, Operations Research, Reliability, Interval Analysis, Algebra, Biomechanics, Complex analysis, Functional analysis, Optimization, and Data Base Management systems. The department’s vision to cater to the demand from software industry resulted to start a M.Tech. programme in Computer Science and Data Processing (CSDP) and a 5-Year integrated M.Sc. programme in Mathematics and Computing. These two programmes are first of their kind in the country and witnessed integration of Mathematics with Theoretical Computer Science.
       <br><br>
@@ -169,6 +182,7 @@
       <br><br>
       From the strong school of Applied Mathematics, the department now has a balanced expertize covering various areas of Mathematics, Statistics and Theoretical Computer Science. The department is looking forward to encourage young faculty across diversified areas of Mathematics.
       </p></span>
+      <br/><br/>
       <button onclick="myFunction()" id="myBtn">Read more</button><br><br>
       <script>
       function myFunction() {
@@ -210,7 +224,7 @@
 </div>
 
 <footer class="container-fluid text-center">
-  Follow us on : <a href = "#"><img src = "/Images/twitter.png" height= "10px" width = "10px" ></a> <a href = "#">@</a>
+  <!-- Follow us on : <a href = "#"><img src = "/Images/twitter.png" height= "10px" width = "10px" ></a> <a href = "#">@</a> -->
   <p>&copy All copyrights reserved to Mathematics Department</p>
 
 </footer>
