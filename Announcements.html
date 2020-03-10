@@ -32,7 +32,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script>
   <link rel="stylesheet" type="text/css" href="main.css">
   <link rel="stylesheet" type="text/css" href="./Announcements.css">
-
+  
 </head>
 <body>
 </body><header><div class="topnav">
@@ -50,7 +50,7 @@
         <span class="icon-bar"></span>                        
       </button>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="collapse navbar-cmanager-linux-x64.runollapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="./index.php">Home</a></li>
         <li><a href="./Prof_info.php">Professor Information</a></li>
@@ -100,8 +100,7 @@
           }
         ?>
       </fieldset> -->
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSbikYnRdcljMXV33NQpGeV9x0PaBOJ425doTTM1o_pjzUHdN49mxJZboOxGredFS6iJt_kppCsC2yh/pubhtml" width="130%" height="150%">
-    </iframe>
+
     </div>
     <!-- <div class="col-sm-2 sidenav">
       <div class="well">
@@ -124,46 +123,17 @@
   </div>
 </div>
 
+
+
 <footer class="container-fluid text-center">
   <!-- Follow us on : <a href = "#"><img src = "/Images/twitter.png" height= "10px" width = "10px" ></a> <a href = "#">@</a> -->
   <p>&copy All copyrights reserved to Mathematics Department</p>
 
 </footer>
-
 <script>
- var CLIENT_ID = '437731231148-l9g68f2or7ibvn1c73oqhqt6bgd7pb79.apps.googleusercontent.com';
- var API_KEY = 'AIzaSyAYzkG173qfh5Q5akffx4wsaNhFsC6oOcc';
-
-  // Array of API discovery doc URLs for APIs used by the quickstart
-  var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
-
-  // Authorization scopes required by the API; multiple scopes can be
-  // included, separated by spaces.
-  var SCOPES = "https://www.googleapis.com/auth/spreadsheets.readonly";
-
-  function handleClientLoad() {
-   gapi.load('client:auth2', initClient);
-  }
- gapi.client.init({
-          apiKey: API_KEY,
-          clientId: CLIENT_ID,
-          discoveryDocs: DISCOVERY_DOCS,
-          scope: SCOPES
-        })
-        gapi.client.sheets.spreadsheets.values.get({
-          spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
-          range: 'Class Data!A2:E',
-        }).then (res => {
-          console.log('please se ethis ', res)
-
-        })
-        .catch(err => {
-          console.log('errror is ', err)
-        })
-</script>
-<script async defer src="https://apis.google.com/js/api.js"
-      onload="this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()">
-    </script>
-
+ // use a flask API
+  
+  get_data_from_sheet();
+  // const URL = `https://script.google.com/macros/s/AKfycbx3giOjh7CgQIOzRnGc920gtwntuA_ql9RfdZTJMOi2qJBsTs7y/exec`
+  </script>
 </body>
