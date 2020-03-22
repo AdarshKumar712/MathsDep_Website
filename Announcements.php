@@ -32,7 +32,30 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.4.5/fuse.min.js"></script>
   <link rel="stylesheet" type="text/css" href="main.css">
   <link rel="stylesheet" type="text/css" href="./Announcements.css">
+  <style>
+  #anns {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
+#anns td, #anns th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#anns tr:nth-child(even){background-color: #f2f2f2;}
+
+#anns tr:hover {background-color: #ddd;}
+
+#anns th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #333333;
+  color: white;
+}
+  </style>
 </head>
 <body>
 </body><header><div class="topnav">
@@ -100,8 +123,15 @@
           }
         ?>
       </fieldset> -->
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSbikYnRdcljMXV33NQpGeV9x0PaBOJ425doTTM1o_pjzUHdN49mxJZboOxGredFS6iJt_kppCsC2yh/pubhtml" width="130%" height="150%">
-    </iframe>
+    <!-- <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSbikYnRdcljMXV33NQpGeV9x0PaBOJ425doTTM1o_pjzUHdN49mxJZboOxGredFS6iJt_kppCsC2yh/pubhtml" width="130%" height="150%">
+    </iframe> -->
+      <table id="anns">
+      <tr>
+        <th>Date</th>
+        <th>Announcement</th>
+        <th>Made by</th>
+      </tr>
+      </table>
     </div>
     <!-- <div class="col-sm-2 sidenav">
       <div class="well">
@@ -131,39 +161,26 @@
 </footer>
 
 <script>
- var CLIENT_ID = '437731231148-l9g68f2or7ibvn1c73oqhqt6bgd7pb79.apps.googleusercontent.com';
- var API_KEY = 'AIzaSyAYzkG173qfh5Q5akffx4wsaNhFsC6oOcc';
-
-  // Array of API discovery doc URLs for APIs used by the quickstart
-  var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
-
-  // Authorization scopes required by the API; multiple scopes can be
-  // included, separated by spaces.
-  var SCOPES = "https://www.googleapis.com/auth/spreadsheets.readonly";
-
-  function handleClientLoad() {
-   gapi.load('client:auth2', initClient);
-  }
- gapi.client.init({
-          apiKey: API_KEY,
-          clientId: CLIENT_ID,
-          discoveryDocs: DISCOVERY_DOCS,
-          scope: SCOPES
-        })
-        gapi.client.sheets.spreadsheets.values.get({
-          spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
-          range: 'Class Data!A2:E',
-        }).then (res => {
-          console.log('please se ethis ', res)
-
-        })
-        .catch(err => {
-          console.log('errror is ', err)
-        })
+  fetch('http://localhost:3000/anns')
+          .then(res => res.json())
+          .then(anns => {
+            console.log('anns are ',anns);
+            anns = JSON.parse(anns);
+            anns.map(item => {
+              let indiv_row = `
+                <tr>
+                  <td>${item['date']}</td>
+                  <td>${item['announcement']}</td>
+                  <td>${item['madeby']}</td>
+                </tr>
+                `
+                document.getElementById('anns').innerHTML += indiv_row;
+                
+            })
+            
+          })
+          .catch(() => {
+            console.log('error')
+          })
 </script>
-<script async defer src="https://apis.google.com/js/api.js"
-      onload="this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()">
-    </script>
-
 </body>
